@@ -35,6 +35,13 @@ variable "subnetwork" {
         zone                      = "asia-northeast1-a"
     }
 
+    tokyo2-proxy                   = {
+        name                      = "tokyo2-proxy"
+        ip_cidr_range             = "10.206.117.0/24"
+        region                    = "asia-northeast1"
+        zone                      = "asia-northeast1-a"
+    }
+
      
    }
   }

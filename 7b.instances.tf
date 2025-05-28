@@ -7,7 +7,7 @@ resource "google_compute_instance" "tokyo-proxy-vm" {
 
   boot_disk {
     initialize_params {
-      image                    = "debian-cloud/debian-11"
+      image                    = "debian-cloud/debian-12"
       size                     = 10   
     }
   }

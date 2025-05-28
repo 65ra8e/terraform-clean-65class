@@ -13,3 +13,16 @@ output "instance_external_ips" {
   }
   description = "The external ip addresses of the GCE instances."
 }
+
+# ALB Frontend Static IP
+output "lb_static_ip_address" {
+  description = "The static IP address of the load balancer."
+  value       = "http://${google_compute_address.lb.address}"
+}
+
+# https://developer.hashicorp.com/terraform/language/functions/join
+output "compute_zones" {
+  description = "Comma-separated compute zones"
+  # convert set into string delimited by commas (CSV) before output
+  value       = join(", ", data.google_compute_zones.available.names)
+}
